@@ -20,30 +20,23 @@ Bu proje; fabrikadaki mermer blokların kaydını tutmak, stok durumunu anlık i
 * **Görüntü İşleme:** Pillow (QR Kodlar için)
 * **Frontend:** HTML5, CSS3 (Modern & Kurumsal Tasarım)
 
-## ⚙️ Kurulum ve Çalıştırma
-
-Bu projeyi kendi bilgisayarınızda çalıştırmak için adımları izleyin:
-
-1.  **Projeyi İndirin:**
-    ```bash
-    git clone [https://github.com/KULLANICI_ADIN/mermer-stok-takip.git](https://github.com/KULLANICI_ADIN/mermer-stok-takip.git)
-    cd mermer-stok-takip
-    ```
-
-2.  **Gerekli Kütüphaneleri Yükleyin:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3.  **Uygulamayı Başlatın:**
-    ```bash
-    python app.py
-    ```
-
-4.  Tarayıcınızda `http://127.0.0.1:5000` adresine gidin.
 
 ## 📸 Ekran Görüntüleri
-*(Buraya daha sonra projenin ekran görüntülerini ekleyebilirsiniz)*
+### 1. Ana Sayfa
+Sistemimizin ilk giriş sayfası böyle görünmektedir.
+![Ana Sayfa].(tanıtım_görselleri/ana_sayfa.png)
+
+### 2. Yönetim Paneli (Dashboard)
+Fabrikanın anlık durumu, toplam stok ve kritik uyarılar burada görünür.
+![Yönetim Paneli](tanitim_görselleri/panel.png)
+
+### 3. Stok Listesi
+Depodaki tüm ürünlerin detaylı listesi, m2 bilgisi ve QR kod durumu.
+![Stok Listesi](tanitim_görselleri/stok_listesi.png)
+
+### 4. Mal Kabul Ekranı
+Yeni gelen mermerlerin sisteme girişi.
+![Mal Kabul](tanitim_görselleri/mal_kabul.png)
 
 ---
 👨‍💻 **Geliştirici:** Hasan Hüseyin

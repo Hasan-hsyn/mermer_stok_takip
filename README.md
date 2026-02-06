@@ -19,25 +19,23 @@ Bu proje; fabrikadaki mermer blokların kaydını tutmak, stok durumunu anlık i
 * **Veritabanı:** SQLite
 * **Görüntü İşleme:** Pillow (QR Kodlar için)
 * **Frontend:** HTML5, CSS3 (Modern & Kurumsal Tasarım)
-
-
-## 📸 Ekran Görüntüleri
+### Ekran Görüntüleri
 
 ### 1. Ana Sayfa
-Sistemimizin ilk giriş sayfası böyle görünmektedir.
-![Ana Sayfa](tanitim_gorselleri/ana_sayfa.png)
+Sistemimizin ilk giriş sayfası.
+![Ana Sayfa](img/ana_sayfa.png)
 
-### 2. Yönetim Paneli (Dashboard)
-Fabrikanın anlık durumu, toplam stok ve kritik uyarılar burada görünür.
-![Yönetim Paneli](tanitim_gorselleri/panel.png)
+### 2. Yönetim Paneli
+Fabrikanın anlık durumu.
+![Yönetim Paneli](img/panel.png)
 
 ### 3. Stok Listesi
-Depodaki tüm ürünlerin detaylı listesi.
-![Stok Listesi](tanitim_gorselleri/stok_listesi.png)
+Depodaki ürünler.
+![Stok Listesi](img/stok_listesi.png)
 
-### 4. Mal Kabul Ekranı
-Yeni gelen mermerlerin sisteme girişi.
-![Mal Kabul](tanitim_gorselleri/mal_kabul.png)
+### 4. Mal Kabul
+Yeni giriş ekranı.
+![Mal Kabul](img/mal_kabul.png)
 
 ---
 👨‍💻 **Geliştirici:** Hasan Hüseyin

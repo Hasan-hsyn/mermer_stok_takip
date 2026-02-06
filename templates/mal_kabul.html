@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Mal Kabul - Giriş</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-header text-center">
+                        <h3>📦 Yeni Palet Girişi</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Ürün Adı</label>
+                                <input type="text" name="urun_adi" class="form-control" placeholder="Örn: Muğla Beyaz" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Ton / Seleksiyon</label>
+                                <select name="ton" class="form-select">
+                                    <option value="Açık">Açık Ton</option>
+                                    <option value="Orta">Orta Ton</option>
+                                    <option value="Koyu">Koyu Ton</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mermer Fotoğrafı (Opsiyonel)</label>
+                                <input type="file" name="resim" class="form-control">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">En (cm)</label>
+                                    <input type="number" name="en" class="form-control" placeholder="50" required>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="form-label">Boy (cm)</label>
+                                    <input type="number" name="boy" class="form-control" placeholder="300" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Palet İçi Adet</label>
+                                <input type="number" name="adet" class="form-control" placeholder="30" required>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Sisteme Kaydet</button>
+                                <a href="{{ url_for('stoklar') }}" class="btn btn-outline-secondary">İptal</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

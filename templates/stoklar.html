@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Stok Listesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Palet Stok Listesi</h1>
+            <div class="alert alert-info py-2 fw-bold">
+                Toplam Stok: {{ "%.2f"|format(genel_toplam) }} m²
+            </div>
+        </div>
+        
+        <div class="card shadow">
+            <div class="card-body">
+                <table class="table table-hover table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Görsel</th>
+                            <th>QR</th>
+                            <th>Ürün Adı</th>
+                            <th>Ton</th>
+                            <th>Ebatlar</th>
+                            <th>Adet</th>
+                            <th>Toplam Alan</th>
+                            <th>Durum</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for mermer in stok_listesi %}
+                        <tr>
+                            <td>
+                                {% if mermer[6] %}
+                                    <img src="{{ url_for('static', filename='resimler/' + mermer[6]) }}" width="80" class="rounded border">
+                                {% else %}
+                                    <span class="text-muted small">Yok</span>
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                {% if mermer[7] %}
+                                    <img src="{{ url_for('static', filename='qr/' + mermer[7]) }}" width="60">
+                                {% endif %}
+                            </td>
+
+                            <td>#{{ mermer[0] }}<br><strong>{{ mermer[1] }}</strong></td>
+                            
+                            <td>
+                                {% if mermer[2] == 'Açık' %}
+                                    <span class="badge bg-light text-dark border">Açık</span>
+                                {% elif mermer[2] == 'Koyu' %}
+                                    <span class="badge bg-dark">Koyu</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">Orta</span>
+                                {% endif %}
+                            </td>
+                            
+                            <td>{{ mermer[3] }} x {{ mermer[4] }}</td>
+                            <td class="fs-5">{{ mermer[5] }}</td>
+                            <td class="text-primary fw-bold">{{ "%.2f"|format(mermer[8]) }} m²</td>
+                            
+                            <td>
+                                {% if mermer[5] < 20 %}
+                                    <span class="badge bg-danger">Az</span>
+                                {% else %}
+                                    <span class="badge bg-success">İyi</span>
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                <a href="{{ url_for('kesim_yap', id=mermer[0]) }}" class="btn btn-warning btn-sm me-1">✂️</a>
+                                <a href="{{ url_for('stok_sil', id=mermer[0]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istiyor musun?')">🗑️</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <a href="{{ url_for('anasayfa') }}" class="btn btn-outline-secondary">← Ana Sayfaya Dön</a>
+        </div>
+    </div>
+</body>
+</html>

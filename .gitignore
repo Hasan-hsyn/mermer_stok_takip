@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.db
+static/qr/*
+static/resimler/*
+.DS_Store

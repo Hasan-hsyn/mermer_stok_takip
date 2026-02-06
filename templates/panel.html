@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Yönetim Paneli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="#">XXX MERMER</a>
+            <div class="d-flex">
+                <a href="{{ url_for('anasayfa') }}" class="btn btn-outline-light btn-sm me-2">Ana Sayfa</a>
+                <a href="{{ url_for('stoklar') }}" class="btn btn-outline-light btn-sm">Stok Listesi</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4 text-warning"><i class="fa-solid fa-chart-line"></i> Atölye Durum Özeti</h2>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3 shadow h-100" style="background-color: #0d6efd !important;">
+                    <div class="card-header">Toplam Stok (m²)</div>
+                    <div class="card-body">
+                        <h1 class="card-title display-4 fw-bold">{{ toplam_m2 }}</h1>
+                        <p class="card-text">Depodaki tüm taşların toplam alanı.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3 shadow h-100" style="background-color: #198754 !important;">
+                    <div class="card-header">Toplam Palet</div>
+                    <div class="card-body">
+                        <h1 class="card-title display-4 fw-bold">{{ palet_sayisi }}</h1>
+                        <p class="card-text">Adet palet sisteme kayıtlı.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-white bg-danger mb-3 shadow h-100" style="background-color: #dc3545 !important;">
+                    <div class="card-header">Kritik Seviye</div>
+                    <div class="card-body">
+                        <h1 class="card-title display-4 fw-bold">{{ kritik }}</h1>
+                        <p class="card-text">Adet palet bitmek üzere!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <a href="{{ url_for('mal_kabul') }}" class="btn btn-warning w-100 p-4 fs-4 fw-bold text-dark">
+                    <i class="fa-solid fa-truck-ramp-box"></i> Yeni Mal Kabul
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="{{ url_for('stoklar') }}" class="btn btn-secondary w-100 p-4 fs-4 fw-bold">
+                    <i class="fa-solid fa-list"></i> Stokları İncele
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

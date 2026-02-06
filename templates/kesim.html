@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Kesim İşlemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                
+                <div class="card shadow-lg border-warning">
+                    <div class="card-header bg-warning text-dark text-center">
+                        <h3 class="fw-bold">✂️ Üretim / Kesim Girişi</h3>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="alert alert-dark text-center">
+                            <h4 class="text-warning">{{ mermer[1] }}</h4> <p class="mb-0">
+                                {{ mermer[3] }}x{{ mermer[4] }} cm | 
+                                <span class="badge bg-secondary">{{ mermer[2] }} Ton</span>
+                            </p>
+                            <hr>
+                            <h5 class="fw-bold">Mevcut Stok: {{ mermer[5] }} Adet</h5>
+                        </div>
+
+                        {% if hata_mesaji %}
+                        <div class="alert alert-danger text-center fw-bold">
+                            {{ hata_mesaji }}
+                        </div>
+                        {% endif %}
+
+                        <form method="POST">
+                            <div class="mb-4">
+                                <label class="form-label fs-5">Kesilen Plaka Sayısı:</label>
+                                <input type="number" name="kesilen_adet" class="form-control form-control-lg text-center fw-bold" placeholder="0" required autofocus>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-warning btn-lg fw-bold">⬇️ Stoktan Düş</button>
+                                <a href="{{ url_for('stoklar') }}" class="btn btn-outline-secondary">İptal</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

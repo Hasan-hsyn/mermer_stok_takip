@@ -24,7 +24,7 @@ Bu proje; fabrikadaki mermer blokların kaydını tutmak, stok durumunu anlık i
 ## 📸 Ekran Görüntüleri
 ### 1. Ana Sayfa
 Sistemimizin ilk giriş sayfası böyle görünmektedir.
-![Ana Sayfa].(tanıtım_görselleri/ana_sayfa.png)
+![Ana Sayfa](tanıtım_görselleri/ana_sayfa.png)
 
 ### 2. Yönetim Paneli (Dashboard)
 Fabrikanın anlık durumu, toplam stok ve kritik uyarılar burada görünür.

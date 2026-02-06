@@ -1,0 +1,49 @@
+# 🏭 Mermer Fabrikası Stok Takip Sistemi
+
+Python ve Flask kullanılarak geliştirilmiş, mermer fabrikaları için dijital stok yönetim ve takip sistemi.
+
+Bu proje; fabrikadaki mermer blokların kaydını tutmak, stok durumunu anlık izlemek ve QR kod teknolojisi ile fiziksel takibi kolaylaştırmak amacıyla geliştirilmiştir.
+
+## 🚀 Özellikler
+
+* **Detaylı Stok Girişi:** Mermer türü, ton, en, boy, adet ve fotoğraf ile kayıt.
+* **Otomatik QR Kod:** Her yeni mermer girişi için otomatik QR kod oluşturur ve linkler.
+* **Akıllı Hesaplama:** En/Boy/Adet verisinden otomatik m2 hesabı yapar.
+* **Kritik Stok Uyarısı:** Stoğu 20'nin altına düşen ürünler için ana panelde uyarı verir.
+* **Kesim Modülü:** Stoktan düşüm (kesim) yapıldığında veritabanını ve toplam m2'yi günceller.
+* **Mobil Uyumlu Arayüz:** Tablet ve telefonlardan kolay kullanım için responsive tasarım.
+
+## 🛠️ Kullanılan Teknolojiler
+
+* **Backend:** Python 3, Flask
+* **Veritabanı:** SQLite
+* **Görüntü İşleme:** Pillow (QR Kodlar için)
+* **Frontend:** HTML5, CSS3 (Modern & Kurumsal Tasarım)
+
+## ⚙️ Kurulum ve Çalıştırma
+
+Bu projeyi kendi bilgisayarınızda çalıştırmak için adımları izleyin:
+
+1.  **Projeyi İndirin:**
+    ```bash
+    git clone [https://github.com/KULLANICI_ADIN/mermer-stok-takip.git](https://github.com/KULLANICI_ADIN/mermer-stok-takip.git)
+    cd mermer-stok-takip
+    ```
+
+2.  **Gerekli Kütüphaneleri Yükleyin:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Uygulamayı Başlatın:**
+    ```bash
+    python app.py
+    ```
+
+4.  Tarayıcınızda `http://127.0.0.1:5000` adresine gidin.
+
+## 📸 Ekran Görüntüleri
+*(Buraya daha sonra projenin ekran görüntülerini ekleyebilirsiniz)*
+
+---
+👨‍💻 **Geliştirici:** Hasan Hüseyin

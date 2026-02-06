@@ -23,19 +23,19 @@ Bu proje; fabrikadaki mermer blokların kaydını tutmak, stok durumunu anlık i
 
 ### 1. Ana Sayfa
 Sistemimizin ilk giriş sayfası.
-![Ana Sayfa](img/ana_sayfa.png)
+![Ana Sayfa](ana_sayfa.png)
 
 ### 2. Yönetim Paneli
 Fabrikanın anlık durumu.
-![Yönetim Paneli](img/panel.png)
+![Yönetim Paneli](panel.png)
 
 ### 3. Stok Listesi
 Depodaki ürünler.
-![Stok Listesi](img/stok_listesi.png)
+![Stok Listesi](stok_listesi.png)
 
 ### 4. Mal Kabul
 Yeni giriş ekranı.
-![Mal Kabul](img/mal_kabul.png)
+![Mal Kabul](mal_kabul.png)
 
 ---
 👨‍💻 **Geliştirici:** Hasan Hüseyin
